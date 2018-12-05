@@ -9,6 +9,7 @@ before_install:
 - go get github.com/axw/gocov/gocov github.com/mattn/goveralls
 - go get golang.org/x/tools/cmd/cover
 - go get github.com/golang/lint/golint
+- go get golang.org/x/tools/cmd/stringer
 - go get -t -v $(go list ./... | grep -v '/vendor/')
 before_script:
 - golint ./...
