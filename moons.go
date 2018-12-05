@@ -22,6 +22,7 @@ const (
 	Saturn
 	Uranus
 	Neptune
+ Ceres
 
 	// Unknown is used when converting from string to CelestialBody
 	// and shows that the returned body is not recognized.
