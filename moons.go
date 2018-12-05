@@ -10,7 +10,8 @@ import (
 //go:generate stringer -type=CelestialBody
 type CelestialBody int
 
-// Constants with the most prominent celestial bodies which this library understands.
+// Constants with the most prominent celestial bodies which this
+// library understands.
 const (
 	Sun CelestialBody = iota
 	Mercury
@@ -22,8 +23,8 @@ const (
 	Uranus
 	Neptune
 
-	// Unknown is used when converting from string to CelestialBody and shows that
-	// the returned body is not recognized.
+	// Unknown is used when converting from string to CelestialBody
+	// and shows that the returned body is not recognized.
 	Unknown
 )
 
@@ -40,7 +41,8 @@ func Count(planet CelestialBody) (int, error) {
 	return count, nil
 }
 
-// BodyFromString returns a CelestialBody which corresponds to the string `name`.
+// BodyFromString returns a CelestialBody which corresponds to
+// the string `name`.
 func BodyFromString(name string) CelestialBody {
 	body, ok := nameToBody[strings.ToLower(name)]
 	if !ok {
