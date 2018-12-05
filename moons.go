@@ -47,9 +47,11 @@ func BodyFromString(name string) CelestialBody {
 	body, ok := nameToBody[strings.ToLower(name)]
 	if !ok {
 		return Unknown
+	} else {
+		return body
 	}
 
-	return body
+	return Unknown
 }
 
 var moonsCount = map[CelestialBody]int{
