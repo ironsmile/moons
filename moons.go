@@ -22,7 +22,7 @@ const (
 	Saturn
 	Uranus
 	Neptune
- Ceres
+	Ceres
 
 	// Unknown is used when converting from string to CelestialBody
 	// and shows that the returned body is not recognized.
@@ -48,11 +48,9 @@ func BodyFromString(name string) CelestialBody {
 	body, ok := nameToBody[strings.ToLower(name)]
 	if !ok {
 		return Unknown
-	} else {
-		return body
 	}
 
-	return Unknown
+	return body
 }
 
 var moonsCount = map[CelestialBody]int{
