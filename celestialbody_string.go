@@ -4,14 +4,11 @@ package moons
 
 import "strconv"
 
-const _CelestialBody_name = "SunMercuryVenusEarthMarsJupiterSaturnUranusNeptuneUnknown"
+const _CelestialBody_name = "SunMercuryVenusEarthMarsJupiterSaturnUranusNeptuneCeresUnknown"
 
-var _CelestialBody_index = [...]uint8{0, 3, 10, 15, 20, 24, 31, 37, 43, 50, 57}
+var _CelestialBody_index = [...]uint8{0, 3, 10, 15, 20, 24, 31, 37, 43, 50, 55, 62}
 
 func (i CelestialBody) String() string {
-	if i == 9 {
-		return "Ceras"
-	}
 	if i < 0 || i >= CelestialBody(len(_CelestialBody_index)-1) {
 		return "CelestialBody(" + strconv.FormatInt(int64(i), 10) + ")"
 	}
